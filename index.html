@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="interactive system that manages inventory data.">
+  <meta name="keywords" content="inventory, interactive system, JavaScript, HTML, user input">
+  <meta name="author" content="Yoshira Barros Bernal">
+  <meta name="sitedomain" content="https://github.com/Bernalyos">
+  <meta name="organization" content="bernalyos">
+  <meta name="designer" content="Yoshira">
+  <meta name="copyright" content="© 2025 bernalyos. All rights reserved">
+  <meta name="robots" content="index,follow">
+  <meta name="googlebot" content="index,follow">
+  <meta name="revisit-after" content="15days">
+  <meta name="theme-color" content="#ffffff">
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="src/css/styles.css">
+  <!-- Page title -->
+  <title>Gestion de inventario</title>
+</head>
+
+<body>
+  <main>
+    <header>Gestión de inventario</header>
+    <section>
+        <h2>Agregar Producto</h2>
+        <form id="form">
+          <!-- Input for product name -->
+          <label for="nombre">Ingresa el nombre del producto:</label>
+          <input type="text" id="nombre" />
+          <!-- Input for product price -->
+          <label for="precio">Ingresa el precio del producto:</label>
+          <input type="number" id="precio" />
+          <!-- Input for product category -->
+          <label for="categoria">Ingresa la categoria del producto:</label>
+          <input type="text" id="categoria" />
+          <!-- Submit button to register product -->
+          <button type="submit" id="bttn">Registrar</button>
+        </form>
+    </section>
+    <section class="resultados">
+      <h2>Resultados</h2>
+
+      <div id="listaProductos"></div>
+
+    </section>
+
+
+    <footer id="derechos">
+      <p>&copy;2025 my web derechos reservados</p>
+    </footer>
+
+  </main>
+
+
+</body>
+<script type="module" src="./src/js/main.js" defer></script>
+
+</html>

@@ -1,0 +1,206 @@
+/* Variables de color */
+:root {
+    --color-principal: #cba6f7;
+    --color-secundario: #a277f2;
+    --color-fondo: #f9efff;
+    --color-texto: #3b3054;
+    --color-boton: #8e44ad;
+    --color-boton-hover: #732d91;
+    --color-blanco: #ffffff;
+  }
+  
+  /* Reset básico */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Segoe UI", sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    padding-top: 80px;
+    padding-bottom: 60px;
+  }
+  
+  /* HEADER */
+  header {
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
+    padding: 1rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(170, 6, 185, 0.973);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  
+  /* FORMULARIO */
+form {
+    background-color: var(--color-blanco);
+    border-radius: 10px;
+    padding: 1.5rem;
+    max-width: 500px;
+    margin: 0 auto;
+    box-shadow: 0 2px 5px rgba(170, 6, 185, 0.973);
+    
+}
+  
+h2 {
+    color: var(--color-boton);
+    margin-bottom: 1rem;
+    text-align: center;
+    
+  }
+  
+  form label {
+    display: block;
+    margin-top: 0.8rem;
+    font-weight: 600;
+  }
+  
+  form input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.3rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  form button {
+    margin-top: 1.2rem;
+    width: 100%;
+    padding: 0.7rem;
+    background-color: var(--color-boton);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  form button:hover {
+    background-color: var(--color-boton-hover);
+  }
+  
+  /* RESULTADOS */
+  .resultados {
+    max-width: 700px;
+    margin: 2rem auto;
+    padding: 1rem;
+  }
+  
+  .resultados h2 {
+    color: var(--color-boton);
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  #listaProductos .card {
+    background-color: var(--color-blanco);
+    border-left: 5px solid var(--color-secundario);
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+  
+  #listaProductos button {
+    margin-top: 0.5rem;
+  }
+  
+  /* FOOTER */
+  footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--color-principal);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
+  }
+  
+
+/* BOTONES DE ACCIONES EN CARDS */
+
+.card .btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    margin-right: 0.5rem;
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Botón Editar */
+  .card .btn-editar {
+    background-color: var(--color-secundario);
+    color: var(--color-blanco);
+  }
+  
+  .card .btn-editar:hover {
+    background-color: #8253e6; /* tono más oscuro */
+  }
+  
+  /* Botón Eliminar */
+  .card .btn-eliminar {
+    background-color: #e74c3c; /* rojo*/
+  }
+
+  /* RESPONSIVE DESIGN */
+  @media (max-width: 768px) {
+    form, .resultados {
+      padding: 1rem;
+      margin: 1rem;
+    }
+  
+    header {
+      font-size: 1.5rem;
+      padding: 0.8rem;
+    }
+  
+    footer {
+      font-size: 0.8rem;
+      padding: 0.8rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    form, .resultados {
+      width: 90%;
+      margin: 1rem auto;
+    }
+  
+    form h2, .resultados h2 {
+      font-size: 1.2rem;
+    }
+  
+    form button {
+      font-size: 0.9rem;
+    }
+  
+    header {
+      font-size: 1.3rem;
+    }
+  }
+  @media (max-width: 480px) {
+    .card .btn {
+      width: 100%;
+      margin-bottom: 0.5rem;
+    }
+  }
+  
