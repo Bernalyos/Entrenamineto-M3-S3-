@@ -1,0 +1,22 @@
+{
+  "productos": [
+    {
+      "id": "cecf",
+      "nombre": "queso",
+      "precio": 15000,
+      "categoria": "comida"
+    },
+    {
+      "id": "78df",
+      "nombre": "arroz",
+      "precio": 15000,
+      "categoria": "comida"
+    },
+    {
+      "id": "246d",
+      "nombre": "pizza",
+      "precio": 1500,
+      "categoria": "comida"
+    }
+  ]
+}
