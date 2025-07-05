@@ -1,22 +1,40 @@
 {
   "productos": [
     {
-      "id": "cecf",
+      "id": "fe4b",
+      "nombre": "agua",
+      "precio": 12,
+      "categoria": "bebida"
+    },
+    {
+      "id": "d529",
       "nombre": "queso",
       "precio": 15000,
       "categoria": "comida"
     },
     {
-      "id": "78df",
-      "nombre": "arroz",
-      "precio": 15000,
+      "id": "8144",
+      "nombre": "azucar",
+      "precio": 1200,
+      "categoria": "bebida"
+    },
+    {
+      "id": "9126",
+      "nombre": "hariana",
+      "precio": 2500,
       "categoria": "comida"
     },
     {
-      "id": "246d",
-      "nombre": "pizza",
-      "precio": 1500,
+      "id": "92bf",
+      "nombre": "hamburguesa",
+      "precio": 12000,
       "categoria": "comida"
+    },
+    {
+      "id": "2d20",
+      "nombre": "cocacola",
+      "precio": 5000,
+      "categoria": "bebida"
     }
   ]
 }

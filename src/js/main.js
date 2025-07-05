@@ -1,7 +1,9 @@
 
+// Import alert functions from alertas.js
 import { alertaExito, alertaError, alertaConfirmarEliminacion } from './alertas.js';
 
 const endpointProductos = "http://localhost:3000/productos";
+
 const $form = document.getElementById("form");
 const $nombre = document.getElementById("nombre");
 const $precio = document.getElementById("precio");
@@ -11,8 +13,8 @@ const $bttn = document.getElementById("bttn");
 
 let productoEditandoId = null;
 
-// Evento al enviar el formulario
 
+// Handle form submission (Create or Update product)
 $form.addEventListener('submit', async function (e) {
   e.preventDefault();
 
@@ -20,7 +22,8 @@ $form.addEventListener('submit', async function (e) {
   const precio = parseFloat($precio.value.trim());
   const categoria = $categoria.value.trim();
 
-  // 1. Validaciones
+ 
+  // Validate form fields
   if (!nombre || !categoria) {
     alertaError("Por favor completa todos los campos.");
     return;
@@ -31,7 +34,7 @@ $form.addEventListener('submit', async function (e) {
     return;
   }
 
-  // 2. Comprobar duplicado
+ // Check for duplicate product name
   try {
     const response = await fetch(endpointProductos);
     const productos = await response.json();
@@ -42,7 +45,7 @@ $form.addEventListener('submit', async function (e) {
       return;
     }
 
-    // 3. Crear producto si pasa validaciones
+    // Create product if valid and not duplicate
     const nuevoProducto = { nombre, precio, categoria };
 
     const postRes = await fetch(endpointProductos, {
@@ -62,6 +65,7 @@ $form.addEventListener('submit', async function (e) {
     alertaError("Hubo un error al agregar el producto.");
   }
 });
+// Fetch and display all products
 
 async function obtenerProductos() {
   try {
@@ -75,6 +79,7 @@ async function obtenerProductos() {
   }
 }
 
+// Render products as cards with edit and delete buttons
 function renderizarProductos(productos) {
   $lista.innerHTML = "";
 
@@ -103,7 +108,7 @@ function renderizarProductos(productos) {
     $lista.appendChild(div);
   });
 }
-
+// Delete product by ID
 async function eliminarProducto(id) {
   try {
     alertaConfirmarEliminacion()
@@ -117,6 +122,8 @@ async function eliminarProducto(id) {
     console.error("Error:", error.message);
   }
 }
+
+// Load product data into form for editing
 
 async function cargarProductoParaEditar(id) {
   try {
